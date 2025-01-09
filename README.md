@@ -105,15 +105,15 @@ You can modify searched elements in method find_all()\
 example. datas = soup.find_all('div', class_="item")
 
 ### How to add more restaurants (Scaling)
-Täytä (Mikael M)
 
-## Time (aika.py) Jussi
 
-Täytä
-
-## Running code locally Jussi
+## Time (aika.py) 
 
 Täytä
+
+## Running code locally 
+
+
 
 ## Errors
 ### requirements.txt install error
