@@ -71,15 +71,13 @@ Press => Enable Socket Mode
 
 ## Scraping (ruokapaikat.py)
 
-### Principle
-The script uses the URL of the website as shown in the first example below to scrape the website. Then the script searches the classes and elements using given parameters.
-The parameters given differ page to page. Therefore parameters that work for "lounaat.info" might not work for another page. 
+The script uses the URL of the website as shown in the first example below to scrape the website. Then the script searches the classes and elements using given parameters. The parameters given differ page to page. Therefore parameters that work for "lounaat.info" might not work for another page.
 
-### Changing the URL
-Put websites URL you wanna scrape the information inside the ''\
+Changing the URL
+Put websites URL you wanna scrape the information inside the ''
 example. html_text = requests.get('https://www.lounaat.info/lounas/pancho-villa/lappeenranta').text
 
-### Removing the Restaurant
+Removing the Restaurant
 To successfully remove a restaurant from the script you need to remove:
 
 ( "#" corresponds to the restaurant number in ruokapaikat.py)
@@ -92,27 +90,69 @@ menu# = find_ruoka#
 
 for loop which corresponds to the restaurant (i.e. ruokana in menu1)
 
-res# = [all_restaurants[#]]
-res# = ''.join(res#)
+res# = [all_restaurants[#]] res# = ''.join(res#)
 
 FROM RUOKAPAIKAT.PY:
 
 def find_ruoka#():
 
-### Changing the parameters for the searched elements
-Websites are constructed different ways, using different class names and elements.\
-You can modify searched elements in method find_all()\
+Changing the parameters for the searched elements
+Websites are constructed different ways, using different class names and elements.
+You can modify searched elements in method find_all()
 example. datas = soup.find_all('div', class_="item")
 
-### How to add more restaurants (Scaling)
+How to add more restaurants (Scaling)
+To successfully add a restaurant to the script you need to add:
+
+( "#" corresponds to the restaurant number in ruokapaikat.py)
+
+TO MAIN.PY:
+
+voter_ids#
+
+vote_count#
+
+for loop which corresponds to the restaurant (i.e. ruokana in menu1)
+
+global vote_count#
+
+vote_count = len(voter_ids#)
+
+res# = [all_restaurants[#]] res# = ''.join(res#)
+
+TO RUOKAPAIKAT.PY:
+
+(note: All websites are built differently so the code you use must reflect this)
+
+def find_ruoka#():
 
 
 ## Time (aika.py) 
 
-Täytä
+Defines a function called "aika" (Finnish for "time") that returns the current date as a string in the format "day.month". It uses the date.today() method from the datetime module to get the current date, then extracts the day and month components. These are then formatted as a string and returned. The time functions ultimately provide the daily lunch menus of restaurants to the team's Slack channel at 10 am automatically, either locally or in the cloud.
 
 ## Running code locally 
+To run these functions locally, you would need to have Python and the BeautifulSoup library installed on your computer. You would then copy and paste the code into a Python script and run the script in a Python environment. The functions will execute and print out the menu items for each restaurant as a list of Python objects.
 
+Clone the repository to your local machine using Git. Navigate to the directory where you want the project to be stored and run. Remember to install dependencies!
+
+Set up a Virtual Environment (optional but recommended). You can create a virtual environment using venv. Open a terminal within VSCode (Terminal > New Terminal) and navigate to your project directory.
+
+Monitor the output: As your script runs, you should see output in the terminal indicating the progress of your scraping, voting, or any other operations your script performs.
+
+AND
+
+More of python script, run scheduled Python scripts
+
+Adding a new "trigger" which you can design to add time task to run LounasBot every day 10am when there is food available. After that you can change duration of script and repeating time.
+
+Remember to "Enable" trigger!!
+
+Add new action which is starting the program and adding the path to program on Windows command prompt
+
+If you want more information running the code with Task scheduler under is video about the task scheduler
+
+https://www.youtube.com/watch?v=4n2fC97MNac&t=249s
 
 
 ## Errors
@@ -133,5 +173,3 @@ If that doesnt work you need to install C++ Build tools downloading it from Micr
 You can also use Visual Studio installer and select C++ package to install and it will fix the error too.
 
 
-## LunchBot Avatar (created using AI)
-![T0615Q9B316-U0603QHDF7Z-2acdd59bc471-512](https://github.com/MikMakQT/Lunchbot/assets/122342899/61bc8002-009c-495f-afe2-9ce4f77ad993)
